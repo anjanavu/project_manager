@@ -11,6 +11,7 @@ const userSchema = new Schema(
       },
       phoneNumber: {
         type: Number,
+        required: true,
       },
       email: {
         type: String,
@@ -22,9 +23,17 @@ const userSchema = new Schema(
         required: true,
       },
       profilePicture: {
-        type: Buffer,
+        type: String,
         default:
           'https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg',
+      },
+      usertype: {
+        type: String,
+        enum: ['projectManager', 'client', 'member'] 
+      },
+      projectId: {
+        type: Schema.Types.ObjectId,
+        ref: 'projects',
       },
     },
     { timestamps: true }
