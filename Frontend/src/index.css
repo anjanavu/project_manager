@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@media (min-width: 30em) {
+    .filepond--item {
+        width: calc(50% - 0.5em);
+        padding: 6px;
+    }
+}
+
+@media (min-width: 50em) {
+    .filepond--item {
+        width: calc(20% - 0.5em);
+        padding: 8px;
+    }
+}
