@@ -1,4 +1,4 @@
-const bcrypt = require("bcryptjs"); // Import bcryptjs library
+const bcrypt = require("bcryptjs"); 
 const Admin = require("../model/admin");
 
 const addAdmin = async (req, res) => {
