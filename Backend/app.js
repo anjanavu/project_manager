@@ -4,6 +4,7 @@ const cors = require('cors');
 require('dotenv').config(); 
 const userRoutes = require('./routes/userRoute');
 const authRoutes = require('./routes/authRoute');
+const adminRoutes=require('./routes/adminRoute')
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
@@ -22,7 +23,8 @@ app.listen(4000,()=>{
     console.log('server listening on port 4000')
 })
 app.use("/user",userRoutes);
-app.use("/auth",authRoutes)
+app.use("/auth",authRoutes);
+app.use("/admin",adminRoutes);
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;
     const message = err.message || 'Internal Server Error';

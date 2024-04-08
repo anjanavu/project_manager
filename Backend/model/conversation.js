@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const ticketSchema = new Schema(
+const conversationSchema = new Schema(
   {
     ticketId: {
       type: Schema.Types.ObjectId,
@@ -23,6 +23,6 @@ const ticketSchema = new Schema(
   { timestamps: true }
 );
 
-const Ticket = mongoose.model("tickets", ticketSchema);
+const Conversation = mongoose.model("conversations", conversationSchema);
 
-module.exports = Ticket;
+module.exports = Conversation;
